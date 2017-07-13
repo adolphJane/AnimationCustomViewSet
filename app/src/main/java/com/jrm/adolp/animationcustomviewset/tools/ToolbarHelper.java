@@ -1,6 +1,7 @@
 package com.jrm.adolp.animationcustomviewset.tools;
 
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.jrm.adolp.animationcustomviewset.R;
@@ -20,7 +21,8 @@ public class ToolbarHelper {
     }
 
     public void setTitle(String title){
-        TextView text = mToolbar.findViewById(R.id.toolbar_top_tv);
+        TextView text = (TextView) mToolbar.findViewById(R.id.toolbar_top_tv);
+        Log.e("TopTitle",title);
         text.setText(title);
     }
 }

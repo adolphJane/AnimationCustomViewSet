@@ -1,11 +1,10 @@
-package com.jrm.adolp.animationcustomviewset;
+package com.jrm.adolp.animationcustomviewset.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
+import com.jrm.adolp.animationcustomviewset.R;
 import com.jrm.adolp.animationcustomviewset.tools.ToolbarHelper;
 
 public class MainActivity extends BaseActivity {
@@ -13,13 +12,17 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
     }
 
     @Override
     public void handleToolbar(ToolbarHelper helper) {
         super.handleToolbar(helper);
-        helper.setTitle("Animation&CustomViewSet");
+        helper.setTitle("MagicalView");
+    }
+
+    @Override
+    protected int getContentViewId() {
+        return R.layout.activity_main;
     }
 
     public void startAnimation(View view){
