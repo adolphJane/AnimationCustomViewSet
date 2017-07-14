@@ -2,9 +2,14 @@ package com.jrm.adolp.animationcustomviewset.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.jrm.adolp.animationcustomviewset.R;
+import com.jrm.adolp.animationcustomviewset.adapter.AnimationAdapter;
+import com.jrm.adolp.animationcustomviewset.listener.ViewPagerListenter;
 import com.jrm.adolp.animationcustomviewset.tools.ToolbarHelper;
 
 /**
@@ -13,12 +18,13 @@ import com.jrm.adolp.animationcustomviewset.tools.ToolbarHelper;
 
 public class AnimationSetActivity extends BaseActivity {
 
-    private Toolbar toolbar;
+    private ViewPager animationViewPager;
+    private AnimationAdapter adapter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initView();
     }
 
     @Override
@@ -32,7 +38,24 @@ public class AnimationSetActivity extends BaseActivity {
         return R.layout.animation_set_layout;
     }
 
-    private void initView(){
+    @Override
+    protected void initView(){
+        animationViewPager = (ViewPager) findViewById(R.id.animation_set_vp);
+    }
+
+    @Override
+    protected void initData() {
+        adapter = new AnimationAdapter(getSupportFragmentManager());
+        animationViewPager.setAdapter(adapter);
+    }
+
+    @Override
+    protected void initListener() {
+        animationViewPager.addOnPageChangeListener(new ViewPagerListenter());
+    }
+
+    @Override
+    public void onClick(View view) {
 
     }
 }

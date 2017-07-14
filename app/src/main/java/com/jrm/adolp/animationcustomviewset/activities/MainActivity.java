@@ -3,15 +3,35 @@ package com.jrm.adolp.animationcustomviewset.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.jrm.adolp.animationcustomviewset.R;
 import com.jrm.adolp.animationcustomviewset.tools.ToolbarHelper;
 
 public class MainActivity extends BaseActivity {
 
+    private Button btnAnimation,btnCustomView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void initView() {
+        btnAnimation = (Button) findViewById(R.id.btn_animation);
+        btnCustomView = (Button) findViewById(R.id.btn_customview);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+        btnAnimation.setOnClickListener(this);
+        btnCustomView.setOnClickListener(this);
     }
 
     @Override
@@ -25,17 +45,15 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
-    public void startAnimation(View view){
-        if (view.getId() == R.id.btn_animation) {
-            Intent intent = new Intent(MainActivity.this, AnimationSetActivity.class);
-            startActivity(intent);
-        }
-    }
-
-    public void startCustomView(View view){
-        if (view.getId() == R.id.btn_customview) {
-            Intent intent = new Intent(MainActivity.this, CustomViewSetActivity.class);
-            startActivity(intent);
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btn_animation:
+                openActivity(AnimationSetActivity.class);
+                break;
+            case R.id.btn_customview:
+                openActivity(CustomViewSetActivity.class);
+                break;
         }
     }
 }
