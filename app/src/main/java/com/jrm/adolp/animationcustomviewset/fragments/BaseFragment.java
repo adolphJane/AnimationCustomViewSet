@@ -13,7 +13,7 @@ import android.view.ViewGroup;
  * Created by adolp on 2017/7/14.
  */
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements View.OnClickListener{
 
     protected Activity mActivity;
 
@@ -28,8 +28,11 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = LayoutInflater.from(mActivity).inflate(getLayoutId(),container,false);
         initView(view,savedInstanceState);
+        initListener();
         return view;
     }
+
+    protected abstract void initListener();
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

@@ -9,6 +9,8 @@ import android.view.View;
 
 import com.jrm.adolp.animationcustomviewset.R;
 import com.jrm.adolp.animationcustomviewset.adapter.AnimationAdapter;
+import com.jrm.adolp.animationcustomviewset.fragments.animation.Rotate3DFragment;
+import com.jrm.adolp.animationcustomviewset.fragments.customview.TheThreeDBoxFragment;
 import com.jrm.adolp.animationcustomviewset.listener.ViewPagerListenter;
 import com.jrm.adolp.animationcustomviewset.tools.ToolbarHelper;
 
@@ -46,7 +48,12 @@ public class AnimationSetActivity extends BaseActivity {
     @Override
     protected void initData() {
         adapter = new AnimationAdapter(getSupportFragmentManager());
+        initFragment();
         animationViewPager.setAdapter(adapter);
+    }
+
+    private void initFragment(){
+        adapter.addFragment(new Rotate3DFragment());
     }
 
     @Override

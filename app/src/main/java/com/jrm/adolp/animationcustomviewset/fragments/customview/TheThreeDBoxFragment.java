@@ -11,6 +11,12 @@ import com.jrm.adolp.animationcustomviewset.fragments.BaseFragment;
  */
 
 public class TheThreeDBoxFragment extends BaseFragment {
+
+    @Override
+    protected void initListener() {
+
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_the3d;
@@ -23,6 +29,11 @@ public class TheThreeDBoxFragment extends BaseFragment {
 
     @Override
     protected void initData() {
+
+    }
+
+    @Override
+    public void onClick(View view) {
 
     }
 }

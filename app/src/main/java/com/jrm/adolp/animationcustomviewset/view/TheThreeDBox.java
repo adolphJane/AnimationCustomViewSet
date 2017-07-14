@@ -111,7 +111,6 @@ public class TheThreeDBox extends ViewGroup {
             if (child.getVisibility() != GONE){
                 if (i == 0){
                     childTop += params.topMargin;
-                    Log.e("onLayout",params.topMargin+"test");
                 }
                 child.layout(params.leftMargin,childTop,child.getMeasuredWidth() + params.leftMargin,childTop + child.getMeasuredHeight());
                 childTop = childTop + child.getMeasuredHeight();
