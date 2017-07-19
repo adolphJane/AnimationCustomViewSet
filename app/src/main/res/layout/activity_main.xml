@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jrm.adolp.animationcustomviewset.activities.MainActivity">
+    tools:context="com.jrm.adolph.animationcustomviewset.activities.MainActivity">
 
     <Button
         android:id="@+id/btn_animation"
@@ -20,6 +20,15 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/btn_animation"
         android:text="CustomView" />
+
+    <Button
+        android:id="@+id/btn_testView"
+        android:layout_width="270dp"
+        android:layout_height="80dp"
+        android:text="TEST"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
     <include layout="@layout/base_toolbar"/>
 

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/viewpager_bg">
 
-        <com.jrm.adolp.animationcustomviewset.view.TheThreeDBox
+        <com.jrm.adolph.animationcustomviewset.view.TheThreeDBox
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_centerInParent="true">
@@ -23,6 +23,6 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/threed_3"
                 android:layout_gravity="center" />
-        </com.jrm.adolp.animationcustomviewset.view.TheThreeDBox>
+        </com.jrm.adolph.animationcustomviewset.view.TheThreeDBox>
 
 </RelativeLayout>

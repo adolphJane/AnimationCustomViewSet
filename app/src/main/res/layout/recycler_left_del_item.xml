@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:id="@+id/item_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/threed_2" />
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_toRightOf="@id/item_image"
+            android:textSize="16sp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/item_name"
+            android:text="Content"
+            android:layout_below="@id/item_name"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp" />
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="time"
+            android:layout_margin="10dp"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:id="@+id/btn_delete"
+        android:background="#880000"
+        android:text="Delete"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+</LinearLayout>
